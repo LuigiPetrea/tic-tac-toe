@@ -1,3 +1,45 @@
-.App {
-  text-align: center;
+.App{
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+}
+h1{
+    transition: .3s ease-in-out;
+    position: absolute;
+    top: 50px;
+    text-shadow: 5px 5px 15px;
+    user-select: none;
+}
+h1:hover{
+    transform: scale(1.04);
+}
+.xoGrid {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    background: rgba(85, 51, 207, 0.479);
+    box-shadow: 15px 15px 300px rgba(85, 51, 207, 0.4);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cell {
+    margin: 5px;
+    font-size: 60px;
+    user-select: none;
+    transition: .2s ease-in-out;
+    grid-column-end: span 1;
+    grid-column-end: span 1;
+    border: 2px solid white;
+    border-radius: 25px;
+}
+.cell:hover{
+    transform: scale(1.05);
+    box-shadow: 15px 15px 905px red;
+    text-shadow: 5px 5px 15px;
+    background-color: red;
 }
