@@ -1,4 +1,6 @@
 .App{
+    box-sizing: border-box;
+    user-select: none;
     text-align: center;
     color: white;
     display: flex;
@@ -7,39 +9,83 @@
     height: 100vh;
     background: black;
 }
-h1{
+.start{
     transition: .3s ease-in-out;
     position: absolute;
     top: 50px;
     text-shadow: 5px 5px 15px;
-    user-select: none;
+    color: lightblue;
 }
-h1:hover{
+.start:hover{
     transform: scale(1.04);
 }
 .xoGrid {
     display: grid;
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: 100px 100px 100px;
-    background: rgba(85, 51, 207, 0.479);
+    background: rgba(85, 51, 207, 0.2);
     box-shadow: 15px 15px 300px rgba(85, 51, 207, 0.4);
-    padding: 10px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 25px;
 }
 
 .cell {
     margin: 5px;
     font-size: 60px;
-    user-select: none;
     transition: .2s ease-in-out;
     grid-column-end: span 1;
     grid-column-end: span 1;
     border: 2px solid white;
     border-radius: 25px;
+    
 }
 .cell:hover{
     transform: scale(1.05);
     box-shadow: 15px 15px 905px red;
     text-shadow: 5px 5px 15px;
     background-color: red;
+}
+.win{
+    background: red;
+    color: white;
+    font-size: 45px;
+}
+button{
+    width: 250px;
+    transition: .2s ease-in-out;
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin: 20px;
+    background: violet;
+}
+button:hover{
+    transform: scale(1.1);
+}
+.alert{
+    height: 365px;
+    position: absolute;
+    margin: -25px;
+    border-radius: 20px;
+    padding: 40px;
+    background: rgba(255, 0, 0, 0.486);
+    box-shadow: 15px 15px 105px red;
+    color: lightblue;
+}
+.alert button{
+    position: relative;
+    top: 150px;
+}
+.alert-h1{
+    transform: translate(50%, -40%);
+    transition: .3s ease-in-out;
+    position: absolute;
+    top: 50px;
+    text-shadow: 5px 5px 15px;
+}
+.alert button:hover{
+    color: red;
+    box-shadow: 15px 15px 1000px red;
 }
